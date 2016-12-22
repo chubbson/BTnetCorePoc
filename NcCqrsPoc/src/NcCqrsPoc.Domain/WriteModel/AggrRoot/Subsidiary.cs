@@ -23,6 +23,15 @@ namespace NcCqrsPoc.Domain.WriteModel.AggrRoot
         // private default constructor
         private Subsidiary() { }
 
+        /// <summary>
+        /// Subsidiary Constructor
+        /// Applies SubsidiaryCreatedEvent
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="subsidiaryID"></param>
+        /// <param name="streetAddress"></param>
+        /// <param name="city"></param>
+        /// <param name="postalCode"></param>
         public Subsidiary(Guid id, int subsidiaryID, string streetAddress, string city, string postalCode)
         {
             Id = id;
@@ -34,6 +43,28 @@ namespace NcCqrsPoc.Domain.WriteModel.AggrRoot
 
             // apply Events
             ApplyChange(new SubsidiaryCreatedEvent(id, subsidiaryID, streetAddress, city, postalCode));
+        }
+
+        /// <summary>
+        /// Add Employee to Subsidiary
+        /// Applies EmployeeAssignedToSubsidiaryEvent
+        /// </summary>
+        /// <param name="employeeID"></param>
+        public void AddEmployee(int employeeID)
+        {
+            _employees.Add(employeeID);
+            throw new NotImplementedException("Applies EmployeeAssignedToSubsidiaryEvent");
+        }
+
+        /// <summary>
+        /// Remove from Subsidiary
+        /// Applies EmployeeRemovedFromSubsidiaryEvent
+        /// </summary>
+        /// <param name="employeeID"></param>
+        public void RemoveEmployee(int employeeID)
+        {
+            _employees.Remove(employeeID);
+            throw new NotImplementedException("Applies EmployeeRemovedFromSubsidiaryEvent");
         }
     }
 }
