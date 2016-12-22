@@ -1,4 +1,5 @@
 ﻿using CQRSlite.Domain;
+using NcCqrsPoc.Domain.Events.Subsidiaries;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,8 +32,8 @@ namespace NcCqrsPoc.Domain.WriteModel.AggrRoot
             _postalCode = postalCode;
             _employees = new List<int>();
 
-            throw new NotImplementedException("Apply Change new Subsidiary CreatedEvent is not implementet in Subsidiary Constructor");
-            // apply Events - ApplyChange(new SubsidiaryCreatedEvent(id, subsidiaryID, streetAddress, city, postalCode));
+            // apply Events
+            ApplyChange(new SubsidiaryCreatedEvent(id, subsidiaryID, streetAddress, city, postalCode));
         }
     }
 }
