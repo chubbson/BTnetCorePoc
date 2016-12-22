@@ -1,4 +1,5 @@
 ﻿using CQRSlite.Domain;
+using NcCqrsPoc.Domain.Events.Employees;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +27,7 @@ namespace NcCqrsPoc.Domain.WriteModel.AggrRoot
             _jobTitle = jobTitle;
 
             //TODO: Apply Events
+            ApplyChange(new EmployeeCreatedEvent(id, employeeID, firstName, lastName, dateOfBirth, jobTitle));
         }
     }
 }
