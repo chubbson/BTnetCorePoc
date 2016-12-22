@@ -53,7 +53,7 @@ namespace NcCqrsPoc.Domain.WriteModel.AggrRoot
         public void AddEmployee(int employeeID)
         {
             _employees.Add(employeeID);
-            throw new NotImplementedException("Applies EmployeeAssignedToSubsidiaryEvent");
+            ApplyChange(new EmployeeAssignedToSubsidiaryEvent(Id, _subsidiaryID, employeeID));
         }
 
         /// <summary>
@@ -64,7 +64,7 @@ namespace NcCqrsPoc.Domain.WriteModel.AggrRoot
         public void RemoveEmployee(int employeeID)
         {
             _employees.Remove(employeeID);
-            throw new NotImplementedException("Applies EmployeeRemovedFromSubsidiaryEvent");
+            ApplyChange(new EmployeeRemovedFromSubsidieryEvent(Id, _subsidiaryID, employeeID));
         }
     }
 }
