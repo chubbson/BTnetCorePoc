@@ -1,11 +1,12 @@
-﻿using System;
+﻿using CQRSlite.Commands;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace NcCqrsPoc.Domain.Commands
 {
-    public class BaseCommand
+    public class BaseCommand : ICommand
     {
         /// <summary>
         /// The Aggregate ID of the Aggregate Root being changed
