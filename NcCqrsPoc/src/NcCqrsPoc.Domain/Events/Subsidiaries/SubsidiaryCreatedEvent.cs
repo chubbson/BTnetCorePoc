@@ -12,7 +12,7 @@ namespace NcCqrsPoc.Domain.Events.Subsidiaries
         public readonly string City;
         public readonly string PostalCode;
 
-        public SubsidiaryCreatedEvent(Guid id, int subsidiaryID, string streetAddress, string city, string state, string postalCode)
+        public SubsidiaryCreatedEvent(Guid id, int subsidiaryID, string streetAddress, string city, string postalCode)
         {
             Id = id;
             SubsidiaryID = subsidiaryID;
