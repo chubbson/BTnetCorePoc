@@ -1,4 +1,5 @@
-﻿using CQRSlite.Events;
+﻿using AutoMapper;
+using CQRSlite.Events;
 using NcCqrsPoc.Domain.Events.Employees;
 using NcCqrsPoc.Domain.ReadModel;
 using NcCqrsPoc.Domain.ReadModel.Repos.Interfaces;
@@ -32,8 +33,8 @@ namespace NcCqrsPoc.Domain.EventHandlers
                 AggregateId and SubsidiaryId will not be set, should be default Value/null sth like that. 
                 it is not explicity used in employeeRepo save command
              this magic stuff should be handelt by IMapper.Map method, 
-             IMapper is form AutoMapper
-             Dependency Injection which will setup in part4 
+             IMapper is from AutoMapper
+             Dependency Injection which will setup later
              does greatly simplifies event hanlder
              */
              EmployeeRM employee = _mapper.Map<EmployeeRM>(message);

@@ -1,4 +1,5 @@
-﻿using CQRSlite.Events;
+﻿using AutoMapper;
+using CQRSlite.Events;
 using NcCqrsPoc.Domain.Events.Subsidiaries;
 using NcCqrsPoc.Domain.ReadModel;
 using NcCqrsPoc.Domain.ReadModel.Repos.Interfaces;
