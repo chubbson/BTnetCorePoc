@@ -64,7 +64,7 @@ namespace NcCqrsPoc.Domain.WriteModel.AggrRoots
         public void RemoveEmployee(int employeeID)
         {
             _employees.Remove(employeeID);
-            ApplyChange(new EmployeeRemovedFromSubsidieryEvent(Id, _subsidiaryID, employeeID));
+            ApplyChange(new EmployeeRemovedFromSubsidiaryEvent(Id, _subsidiaryID, employeeID));
         }
     }
 }

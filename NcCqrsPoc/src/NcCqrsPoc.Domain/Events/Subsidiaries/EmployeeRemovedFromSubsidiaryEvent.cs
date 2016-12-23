@@ -5,12 +5,12 @@ using System.Threading.Tasks;
 
 namespace NcCqrsPoc.Domain.Events.Subsidiaries
 {
-    public class EmployeeRemovedFromSubsidieryEvent : BaseEvent
+    public class EmployeeRemovedFromSubsidiaryEvent : BaseEvent
     {
         public readonly int OldSubsidiaryID;
         public readonly int EmployeeId;
 
-        public EmployeeRemovedFromSubsidieryEvent(Guid id, int oldSubsidiaryID, int employeeId)
+        public EmployeeRemovedFromSubsidiaryEvent(Guid id, int oldSubsidiaryID, int employeeId)
         {
             Id = id;
             OldSubsidiaryID = oldSubsidiaryID;
