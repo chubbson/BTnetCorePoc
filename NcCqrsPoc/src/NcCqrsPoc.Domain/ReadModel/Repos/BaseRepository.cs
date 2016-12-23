@@ -64,6 +64,7 @@ namespace NcCqrsPoc.Domain.ReadModel.Repos
             return Exists(id.ToString());
         }
 
+        // probably marked as private. not used in IBaseRepo interface, which is not an interface of this class!
         public bool Exists(string keySuffix)
         {
             var key = MakeKey(keySuffix);
