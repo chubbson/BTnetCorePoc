@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace NcCqrsPoc.Domain.ReadModel.Repos.Interfaces
 {
-    interface IBaseRepository<T>
+    interface IBaseRepo<T>
     {
         T GetByID(int id);
         List<T> GetMultiple(List<int> ids);
