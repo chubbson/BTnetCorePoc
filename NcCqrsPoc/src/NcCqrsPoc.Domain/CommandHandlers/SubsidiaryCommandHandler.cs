@@ -9,7 +9,9 @@ using System.Threading.Tasks;
 
 namespace NcCqrsPoc.Domain.CommandHandlers
 {
-    public class SubsidiaryCommandHandler : ICommandHandler<CreateSubsidiaryCommand>
+    public class SubsidiaryCommandHandler : ICommandHandler<CreateSubsidiaryCommand>, 
+                                            ICommandHandler<AssignEmployeeToSubsidiaryCommand>, 
+                                            ICommandHandler<RemoveEmployeeFromSubsidiaryCommand>
     {
         private readonly ISession _session;
 
@@ -17,11 +19,24 @@ namespace NcCqrsPoc.Domain.CommandHandlers
         {
             _session = session;
         }
-
         public void Handle(CreateSubsidiaryCommand command)
         {
             var subsidiary = new Subsidiary(command.Id, command.SubsidiaryID, command.StreetAddress, command.City, command.PostalCode);
             _session.Add(subsidiary);
+            _session.Commit();
+        }
+
+        public void Handle(AssignEmployeeToSubsidiaryCommand command)
+        {
+            Subsidiary subsidiary = _session.Get<Subsidiary>(command.Id);
+            subsidiary.AddEmployee(command.EmployeeID);
+            _session.Commit();
+        }
+
+        public void Handle(RemoveEmployeeFromSubsidiaryCommand command)
+        {
+            Subsidiary subsidiary = _session.Get<Subsidiary>(command.Id);
+            subsidiary.RemoveEmployee(command.EmployeeID);
             _session.Commit();
         }
     }
