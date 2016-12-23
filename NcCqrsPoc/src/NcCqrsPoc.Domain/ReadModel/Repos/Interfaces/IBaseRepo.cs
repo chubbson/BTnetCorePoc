@@ -9,7 +9,7 @@ namespace NcCqrsPoc.Domain.ReadModel.Repos.Interfaces
     {
         T GetByID(int id);
         List<T> GetMultiple(List<int> ids);
-        bool Exist(int id);
+        bool Exists(int id);
         void Save(T item);
     }
 }
