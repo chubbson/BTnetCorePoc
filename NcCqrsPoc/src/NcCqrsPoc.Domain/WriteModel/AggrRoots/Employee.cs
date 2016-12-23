@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace NcCqrsPoc.Domain.WriteModel.AggrRoot
+namespace NcCqrsPoc.Domain.WriteModel.AggrRoots
 {
     public class Employee : AggregateRoot
     {

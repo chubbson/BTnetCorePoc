@@ -1,7 +1,7 @@
 ﻿using CQRSlite.Commands;
 using CQRSlite.Domain;
 using NcCqrsPoc.Domain.Commands;
-using NcCqrsPoc.Domain.WriteModel.AggrRoot;
+using NcCqrsPoc.Domain.WriteModel.AggrRoots;
 using System;
 using System.Collections.Generic;
 using System.Linq;
