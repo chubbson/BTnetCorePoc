@@ -8,7 +8,7 @@ namespace NcCqrsPoc.Domain.Commands
     public class RemoveEmployeeFromSubsidiaryCommand : BaseCommand
     {
         public readonly int EmployeeID;
-        public readonly int LocationId;
+        public readonly int SubsidiaryID;
 
         public RemoveEmployeeFromSubsidiaryCommand(Guid id, int subsidiaryID, int employeeID)
         {
