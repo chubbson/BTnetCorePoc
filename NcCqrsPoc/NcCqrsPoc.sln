@@ -16,6 +16,8 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "NcCqrsPoc.Domain", "src\NcC
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "NcCqrsPoc.Web.Queries", "src\NcCqrsPoc.Web.Queries\NcCqrsPoc.Web.Queries.xproj", "{367E409A-7B86-4377-8FC4-005345A93DF2}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "NcCqrsPos.Web.Commands", "src\NcCqrsPos.Web.Commands\NcCqrsPos.Web.Commands.xproj", "{05E5A6D7-31D6-442B-83B0-8F852527CA41}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +36,10 @@ Global
 		{367E409A-7B86-4377-8FC4-005345A93DF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{367E409A-7B86-4377-8FC4-005345A93DF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{367E409A-7B86-4377-8FC4-005345A93DF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05E5A6D7-31D6-442B-83B0-8F852527CA41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05E5A6D7-31D6-442B-83B0-8F852527CA41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05E5A6D7-31D6-442B-83B0-8F852527CA41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05E5A6D7-31D6-442B-83B0-8F852527CA41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -42,5 +48,6 @@ Global
 		{48B423DE-04C2-4753-8EA1-179E66B5284A} = {A094C176-1A3F-4C90-82FD-AE7B64DAAEF1}
 		{9293D85A-852E-4A03-909D-CF4202D1C1BC} = {A094C176-1A3F-4C90-82FD-AE7B64DAAEF1}
 		{367E409A-7B86-4377-8FC4-005345A93DF2} = {A094C176-1A3F-4C90-82FD-AE7B64DAAEF1}
+		{05E5A6D7-31D6-442B-83B0-8F852527CA41} = {A094C176-1A3F-4C90-82FD-AE7B64DAAEF1}
 	EndGlobalSection
 EndGlobal
