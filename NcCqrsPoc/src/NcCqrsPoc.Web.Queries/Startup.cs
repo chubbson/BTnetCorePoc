@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using NcCqrsPoc.Web.Queries.DependencyResolution;
 
 namespace NcCqrsPoc.Web.Queries
 {
@@ -28,8 +29,9 @@ namespace NcCqrsPoc.Web.Queries
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
-            services.AddMvc();
-
+            services.AddMvc();//.AddControllersAsServices();
+            services.AddSingleton<IServiceCollection>(services); // ToDo, could be removed, actually not used
+            CustomDependencyLoader.LoadCustomDependency(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
