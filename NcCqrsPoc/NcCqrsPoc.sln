@@ -16,7 +16,7 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "NcCqrsPoc.Domain", "src\NcC
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "NcCqrsPoc.Web.Queries", "src\NcCqrsPoc.Web.Queries\NcCqrsPoc.Web.Queries.xproj", "{367E409A-7B86-4377-8FC4-005345A93DF2}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "NcCqrsPos.Web.Commands", "src\NcCqrsPos.Web.Commands\NcCqrsPos.Web.Commands.xproj", "{05E5A6D7-31D6-442B-83B0-8F852527CA41}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "NcCqrsPoc.Web.Commands", "src\NcCqrsPos.Web.Commands\NcCqrsPoc.Web.Commands.xproj", "{05E5A6D7-31D6-442B-83B0-8F852527CA41}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
