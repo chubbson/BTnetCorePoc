@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Builder;
 
-namespace NcCqrsPos.Web.Commands
+namespace NcCqrsPoc.Web.Commands
 {
     public class Program
     {

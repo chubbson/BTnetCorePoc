@@ -7,8 +7,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using NcCqrsPoc.Web.Commands.DependencyResolution;
 
-namespace NcCqrsPos.Web.Commands
+namespace NcCqrsPoc.Web.Commands
 {
     public class Startup
     {
@@ -25,10 +26,12 @@ namespace NcCqrsPos.Web.Commands
         public IConfigurationRoot Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
+        // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
-            services.AddMvc();
+            var mvcBuilder = services.AddMvc();
+            CustomDependencyLoader.LoadCustomDependency(services, mvcBuilder);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
