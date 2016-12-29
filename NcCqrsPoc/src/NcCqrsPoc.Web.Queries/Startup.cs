@@ -30,7 +30,7 @@ namespace NcCqrsPoc.Web.Queries
         {
             // Add framework services.
             services.AddMvc();//.AddControllersAsServices();
-            services.AddSingleton<IServiceCollection>(services); // ToDo, could be removed, actually not used
+            services.AddSingleton<IServiceCollection>(services); // ToDo, could be removed, actually not in use
             CustomDependencyLoader.LoadCustomDependency(services);
         }
 
