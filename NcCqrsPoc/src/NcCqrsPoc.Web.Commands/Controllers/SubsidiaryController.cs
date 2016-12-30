@@ -39,6 +39,25 @@ namespace NcCqrsPoc.Web.Commands.Controllers
             return Ok();
         }
 
+        [HttpPost("assignemployee")]
+        public IActionResult AssignEmployee(AssignEmployeeToSubsidiaryRequest request)
+        {
+            var employee = _employeeRepo.GetByID(request.EmployeeID);
+            if (employee.SubsidiaryID != 0)
+            {
+                var oldSubsidiaryAggregateId = _subsidiaryRepo.GetByID(employee.SubsidiaryID).AggregateID;
+
+                RemoveEmployeeFromSubsidiaryCommand removeCommand = new RemoveEmployeeFromSubsidiaryCommand(oldSubsidiaryAggregateId, request.SubsidiaryID, employee.EmployeeID);
+                _commandSender.Send(removeCommand);
+            }
+
+            var locationAggregateID = _subsidiaryRepo.GetByID(request.SubsidiaryID).AggregateID;
+            var assignCommand = new AssignEmployeeToSubsidiaryCommand(locationAggregateID, request.SubsidiaryID, request.EmployeeID);
+            _commandSender.Send(assignCommand);
+
+            return Ok();
+        }
+
         // GET: /<controller>/
         public IActionResult Index()
         {
