@@ -9,7 +9,7 @@ namespace NcCqrsPoc.Domain.WriteModel.AggrRoots
 {
     /// <summary>
     /// Subsidiary Aggregate Root class 
-    /// interprete a physical location or 'Filiale'
+    /// interprete a physical subsidiary / location or 'Filiale'
     /// contains a list registred employees
     /// </summary>
     public class Subsidiary : AggregateRoot
