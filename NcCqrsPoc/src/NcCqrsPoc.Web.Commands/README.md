@@ -89,10 +89,10 @@ Result
 
 -
 
-Check for not existant subsidiary with ID 3: GET  
-GET: http://localhost:16144/api/subsidiaries/3
-Status: 400 Bad Request (update to 404 Not Found)  
-Result  
+Check for not existant subsidiary with ID 3: GET   
+GET: http://localhost:16144/api/subsidiaries/3  
+Status: 400 Bad Request (update to 404 Not Found)    
+Result    
 ```
 No subsidiary with ID 3 was found.
 ```
