@@ -99,9 +99,9 @@ No subsidiary with ID 3 was found.
 
 ### Employee
 
-Creating new Employee and add to new Location #1
-POST: http://localhost:29169/api/employee/create  
-Header: Content-Type application/json  
+Creating new Employee and add to new Location with id 1  
+POST: http://localhost:29169/api/employee/create   
+Header: Content-Type application/json   
 ```
-{"SubsidiaryID":"2","StreetAddress":"somestreet","City":"anywhere","PostalCode":"1234"}
+{"EmployeeID":"4","FirstName":"David","LastName":"Hauri","DateOfBirth":"2/2/1987","JobTitle":"Student","SubsidiaryID":"1"}
 ```
