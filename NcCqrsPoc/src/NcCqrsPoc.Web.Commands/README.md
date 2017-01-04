@@ -91,8 +91,17 @@ Result
 
 Check for not existant subsidiary with ID 3: GET   
 GET: http://localhost:16144/api/subsidiaries/3  
-Status: 400 Bad Request (update to 404 Not Found)    
+Status: 404 Not Found    
 Result    
 ```
 No subsidiary with ID 3 was found.
+```
+
+### Employee
+
+Creating new Employee and add to new Location #1
+POST: http://localhost:29169/api/employee/create  
+Header: Content-Type application/json  
+```
+{"SubsidiaryID":"2","StreetAddress":"somestreet","City":"anywhere","PostalCode":"1234"}
 ```
