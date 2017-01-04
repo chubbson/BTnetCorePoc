@@ -68,3 +68,21 @@ Result
     "aggregateID": "22440a6f-96a9-4d6a-91e0-4f10d982cc96"
   }
 ]
+```
+
+-
+
+Check explicity added subsidiary with ID 2: GET  
+GET: http://localhost:16144/api/subsidiaries/2  
+Status: 200 Ok  
+Result  
+```
+{
+  "subsidiaryID": 2,
+  "streetAddress": "somestreet",
+  "city": "anywhere",
+  "postalCode": "1234",
+  "employees": [],
+  "aggregateID": "22440a6f-96a9-4d6a-91e0-4f10d982cc96"
+}
+```
