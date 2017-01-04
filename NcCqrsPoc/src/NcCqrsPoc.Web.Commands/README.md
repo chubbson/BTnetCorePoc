@@ -4,9 +4,9 @@
 
 -
 
-Initial create commant of non existent subsidiary
-POST: http://localhost:29169/api/subsidiary/create
-Header: Content-Type application/json
+Initial create commant of non existent subsidiary  
+POST: http://localhost:29169/api/subsidiary/create  
+Header: Content-Type application/json  
 ```
 {"SubsidiaryID":"1","StreetAddress":"Teststrasse 1","City":"Testhause","PostalCode":"1234"}
 ```
@@ -14,14 +14,14 @@ Status: 200
 
 -
 
-Run same POST with existant SubsidiaryID 1, should return an error cuz validation fails
-POST: http://localhost:29169/api/subsidiary/create
-Header: Content-Type application/json
+Run same POST with existant SubsidiaryID 1, should return an error cuz validation fails  
+POST: http://localhost:29169/api/subsidiary/create  
+Header: Content-Type application/json  
 ```
 {"SubsidiaryID":"1","StreetAddress":"Teststrasse 1","City":"Testhause","PostalCode":"1234"}
 ```
-Status: 400 Bad Request
-Result
+Status: 400 Bad Request  
+Result  
 ```
 {
   "message": "The request is invalid.",
@@ -35,20 +35,20 @@ Result
 
 -
 
-Add a new Subsidiary POST
-POST: http://localhost:29169/api/subsidiary/create
-Header: Content-Type application/json
+Add a new Subsidiary POST  
+POST: http://localhost:29169/api/subsidiary/create  
+Header: Content-Type application/json  
 ```
 {"SubsidiaryID":"2","StreetAddress":"somestreet","City":"anywhere","PostalCode":"1234"}
 ```
-Status: 200
+Status: 200  
 
 -
 
-Check added subsidiaries: GET
-GET: http://localhost:16144/api/subsidiaries/all
-Status: 200 Ok
-Result
+Check added subsidiaries: GET  
+GET: http://localhost:16144/api/subsidiaries/all  
+Status: 200 Ok  
+Result  
 ```
 [
   {
