@@ -86,3 +86,13 @@ Result
   "aggregateID": "22440a6f-96a9-4d6a-91e0-4f10d982cc96"
 }
 ```
+
+-
+
+Check for not existant subsidiary with ID 3: GET  
+GET: http://localhost:16144/api/subsidiaries/3
+Status: 400 Bad Request (update to 404 Not Found)  
+Result  
+```
+No subsidiary with ID 3 was found.
+```
