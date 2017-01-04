@@ -15,9 +15,7 @@ namespace NcCqrsPoc.Web.Commands.Filters
             if (!actionContext.ModelState.IsValid)
             {
                 actionContext.Result = new BadRequestObjectResult(new ValidationErrorWrapper(actionContext.ModelState));
-                //actionContext.Result = new BadRequestObjectResult(actionContext.ModelState); // ToDo, probalby could remove validationErrorWrapper class. 
             }
-            //base.OnActionExecuting(actionContext); //ToDo, prbbly remove this base call.
         }
     }
 }
