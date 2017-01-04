@@ -16,7 +16,7 @@ namespace NcCqrsPoc.Domain.ReadModel.Repos
     public class SubsidiaryRepo : BaseRepository, ISubsidiaryRepo
     {
         const string c_allCollection = "all";
-        const string c_employeeNameSpace = "subsidiary";
+        const string c_subsidiaryNameSpace = "subsidiary";
 
         /// <summary>
         /// SubsidiaryRepo Constructor, using stackexchange.redis IConnectionMultiplexer redisConnection
@@ -25,7 +25,7 @@ namespace NcCqrsPoc.Domain.ReadModel.Repos
         /// </summary>
         /// <param name="redisConnection"></param>
         public SubsidiaryRepo(IConnectionMultiplexer redisConnection)
-             : base(redisConnection, c_employeeNameSpace) { }
+             : base(redisConnection, c_subsidiaryNameSpace) { }
 
         public SubsidiaryRM GetByID(int subsidiaryID)
         {
