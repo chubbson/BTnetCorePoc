@@ -27,10 +27,10 @@ namespace NcCqrsPoc.Web.Commands.Controllers
             _subsidiaryRepo = subsidiaryRepo;
         }
 
-        // GET: api/employee/create
+        // POST: api/employee/create
         [HttpPost("create")]
         //[NcCqrsPoc.Web.Commands.Filters.BadRequestActionFilter]
-        public IActionResult Create(CreateEmployeeRequest request)
+        public IActionResult Create([FromBody]CreateEmployeeRequest request)
         {
             var command = _mapper.Map<CreateEmployeeCommand>(request);
             _commandSender.Send(command);
